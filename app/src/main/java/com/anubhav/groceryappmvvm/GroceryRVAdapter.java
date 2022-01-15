@@ -32,6 +32,7 @@ public class GroceryRVAdapter extends RecyclerView.Adapter<GroceryViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull GroceryViewHolder holder, int position) {
         GroceryItem currentItem = groceryList.get(holder.getAdapterPosition());
+        holder.nameTv.setText(currentItem.itemPrice);
         holder.priceTv.setText("Rs. " + currentItem.itemPrice);
         holder.quantityTv.setText(currentItem.itemQuantity.toString());
 
